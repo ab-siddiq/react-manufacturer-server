@@ -28,7 +28,7 @@ async function run() {
       const email = req.params.email;
       const user = req.body;
       const filter = { email: email };
-      options = { upsert: true };
+      const options = { upsert: true };
       const updateDoc = {
         $set: user,
       };
