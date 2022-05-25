@@ -8,6 +8,7 @@ app.use(express.json());
 require("dotenv").config();
 
 const { MongoClient, ServerApiVersion } = require("mongodb");
+const { options } = require("nodemon/lib/config");
 const uri = `mongodb+srv://equip_manufacturer:Jq0ppy2tBe16fi61@cluster0.a3zpv.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
@@ -23,7 +24,17 @@ async function run() {
       .db("equipment_manufacturer")
       .collection("users");
 
-    app.put("/user/:email", async (req, res) => {});
+    app.put("/user/:email", async (req, res) => {
+      const email = req.params.email;
+      const user = req.body;
+      const filter = { email: email };
+      options = { upsert: true };
+      const updateDoc = {
+        $set: user,
+      };
+      const result = await useCollection.updateOne(filter, updateDoc, options);
+      res.send(result);
+    });
   } finally {
   }
 }
