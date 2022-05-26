@@ -1,13 +1,15 @@
 const express = require("express");
 const cors = require("cors");
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
+const { MongoClient, ServerApiVersion } = require("mongodb");
+
 const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
-require("dotenv").config();
 
-const { MongoClient, ServerApiVersion } = require("mongodb");
 const { options } = require("nodemon/lib/config");
 const uri = `mongodb+srv://equip_manufacturer:Jq0ppy2tBe16fi61@cluster0.a3zpv.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
