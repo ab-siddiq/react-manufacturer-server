@@ -29,12 +29,20 @@ async function run() {
     app.put("/user/:email", async (req, res) => {
       const email = req.params.email;
       const user = req.body;
+      console.log(user);
       const filter = { email: email };
       const options = { upsert: true };
       const updateDoc = {
         $set: user,
       };
       const result = await useCollection.updateOne(filter, updateDoc, options);
+      // const token = jwt.sign(
+      //   { email: email },
+      //   "e9763359c7356dccaba507fb6fa486b1d2d920e7837dace41bde58d80eaefe7cb16abcfdba125eb92fb7b55d3e400a646a04c0e989bbf7cb9b1ea714ed8a986d",
+      //   { expiresIn: "30s" }
+      // );
+      // console.log(token, "token");
+      // res.send(result, token);
       res.send(result);
     });
   } finally {
