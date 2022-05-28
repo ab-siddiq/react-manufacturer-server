@@ -25,7 +25,10 @@ async function run() {
     const useCollection = client
       .db("equipment_manufacturer")
       .collection("users");
-
+    app.get('/user', async (req,res)=>{
+      const users = await useCollection.find().toArray();
+      res.send(users);
+    })
     app.put("/user/:email", async (req, res) => {
       const email = req.params.email;
       const user = req.body;
