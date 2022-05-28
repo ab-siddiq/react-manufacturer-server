@@ -29,6 +29,27 @@ async function run() {
       const users = await useCollection.find().toArray();
       res.send(users);
     })
+    //make admin
+    app.put("/user/admin/:email", async (req,res)=>{
+      const email = req.params.email;
+      const filter = {email: email};
+      const updateDoc = {
+        $set: {role: "admin"}
+      }
+      const result = await useCollection.updateOne(filter,updateDoc);
+      res.send(result)
+    })
+    //make admin
+    app.put("/user/nUser/:email", async (req,res)=>{
+      const email = req.params.email;
+      const filter = {email: email};
+      const updateDoc = {
+        $set: {role: "user"}
+      }
+      const result = await useCollection.updateOne(filter,updateDoc);
+      res.send(result)
+    })
+    //store users
     app.put("/user/:email", async (req, res) => {
       const email = req.params.email;
       const user = req.body;
