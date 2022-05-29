@@ -39,6 +39,8 @@ async function run() {
 
     const userCollection = client.db("equipment_manufacturer").collection("users");
     const productCollection = client.db("equipment_manufacturer").collection("products");
+    const categoryCollection = client.db("equipment_manufacturer").collection("Categories");
+    const reviewCollection = client.db("equipment_manufacturer").collection("reviews");
     app.get('/user', async (req,res)=>{
       const users = await userCollection.find().toArray();
       res.send(users);
@@ -47,6 +49,18 @@ async function run() {
     app.get('/products', async (req,res)=>{
       const products = await productCollection.find().toArray();
       res.send(products);
+
+    })
+    //get category
+    app.get('/categories', async (req,res)=>{
+      const categories = await categoryCollection.find().toArray();
+      res.send(categories);
+
+    })
+    //get reviews
+    app.get('/reviews', async (req,res)=>{
+      const reviews = await reviewCollection.find().toArray();
+      res.send(reviews);
 
     })
     //make admin

@@ -1,115 +1,42 @@
 [
-    
     {
-        "name": "Bell",
-        "description": "Plastic and Zinc Alloy Universal Bicycle Bell",
-        "price": "37",
-        "ratings": "85",
-        "quantity": "50",
-        "image": "https://i.ibb.co/zNqGqNG/bell.jpg"
+        "name": "Kishor Kumar",
+        "message": "Awesome products.",
+        "image": ""
     },
     {
-        "name": "Bicycle Bell",
-        "description": "Bicycle Bell for Cycle Sound Crisp Ting Tong Style Fancy Adjustable Size",
-        "price": "75",
-        "ratings": "80",
-        "quantity": "99",
-        "image": "https://i.ibb.co/kKtzdCL/bell-2.jpg"
+        "name": "Rabiul Alam",
+        "message": "Faster delivery.",
+        "image": ""
     },
     {
-        "name": "Waterproof Rechargeable",
-        "description": "Waterproof Rechargeable 2 In 1 Bicycle Light and Horn (Many Others Colour) Bicycle horn light 1 pcs",
-        "price": "350",
-        "ratings": "185",
-        "quantity": "11",
-        "image": "https://i.ibb.co/BGgdj4w/ligth-with-horn.jpg"
+        "name": "Nrepeen Kumar",
+        "message": "Good in quality",
+        "image": ""
     },
     {
-        "name": "Security Alarm lock",
-        "description": "Security Alarm lock - Big Size",
-        "price": "500",
-        "ratings": "27",
-        "quantity": "78",
-        "image": "https://i.ibb.co/YyMLygX/lock.jpg"
+        "name": "Hasinul Alma",
+        "message": "Not bad.",
+        "image": ""
     },
     {
-        "name": "Bicycle Looking Glass 01 piece",
-        "description": "Bicycle Looking Glass 01 piece",
-        "price": "70",
-        "ratings": "508",
-        "quantity": "9",
-        "image": "https://i.ibb.co/JmWvq89/looking-glass.jpg"
+        "name": "Tawhid Khan",
+        "message": "Good experience",
+        "image": ""
     },
     {
-        "name": "Bicycle Speed Meter",
-        "description": "Bicycle Speed Meter",
-        "price": "299",
-        "ratings": "21",
-        "quantity": "24",
-        "image": "https://i.ibb.co/mD42GQ4/metre.jpg"
+        "name": "Shamim Hossain",
+        "message": "Long delivery time",
+        "image": ""
     },
     {
-        "name": "Mobile Phone Holders",
-        "description": "Mobile Phone Holders Stands For moto DJI GoPro Mountain Dog Action Camera Recorder Ride Mount stand holder",
-        "price": "430",
-        "ratings": "36",
-        "quantity": "100",
-        "image": "https://i.ibb.co/7rXsyWC/mobile-holder.jpg"
+        "name": "Anwar Hossain",
+        "message": "A good growing product delivery service",
+        "image": ""
     },
     {
-        "name": "Phone Holder Navigation Stand",
-        "description": "Mobile Phone Holder Universal Phone Holder Navigation Stand Bracket for Electric Vehicles / Scooter / Bike / Motorcycle / Bicycle",
-        "price": "171",
-        "ratings": "78",
-        "quantity": "32",
-        "image": "https://i.ibb.co/BcvXRsc/mobile-holder-2.jpg"
-    },
-    {
-        "name": "Universal Waterproof Bicycle Phone Holder",
-        "description": "Universal Waterproof Bicycle Phone Holder Bike Motorcycle Handlebar Mobile Phone Stand Mount Waterproof Cell Phone Bracket Case",
-        "price": "555",
-        "ratings": "24",
-        "quantity": "12",
-        "image": "https://i.ibb.co/4mS4rtc/mobile-holder-3.jpg"
-    },
-    {
-        "name": "Mobile Holder",
-        "description": "Mobile Holder For Bike - Multicolor",
-        "price": "150",
-        "ratings": "242",
-        "quantity": "123",
-        "image": "https://i.ibb.co/gdSkDGN/mobile-holder-4.jpg"
-    },
-    {
-        "name": "Pumper 3 in 1",
-        "description": "Pumper 3 in 1 Mini Hand Pumper for Ball, Balloons & Cycle Tyre",
-        "price": "350",
-        "ratings": "316",
-        "quantity": "20",
-        "image": "https://i.ibb.co/djJbsw1/pumper.jpg"
-    },
-    {
-        "name": "Water Bottle Holder",
-        "description": "Bicycle Stylish Water Bottle Holder. MTB Water Bottle Case",
-        "price": "90",
-        "ratings": "17",
-        "quantity": "13",
-        "image": "https://i.ibb.co/M5wS92p/water-bottle-holder.jpg"
-    },
-    {
-        "name": "Super Bright 140 Lumen Lights",
-        "description": "Super Bright 140 Lumen Lights 3 Modes, Special USB Rechargeable Bike Bike Horn and Light 250 DB with Multicology",
-        "price": "305",
-        "ratings": "12",
-        "quantity": "23",
-        "image": "https://i.ibb.co/3mWqYbD/water-prof-ligth-with-horn.jpg"
-    },
-    {
-        "name": "Wheel Light",
-        "description": "wheel light for Cyle & Bike.",
-        "price": "80",
-        "ratings": "90",
-        "quantity": "100",
-        "image": "https://i.ibb.co/9hQL2xJ/wheel-light.jpg"
+        "name": "Jahid Khandakar",
+        "message": "Happy customer",
+        "image": ""
     }
 ]
