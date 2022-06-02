@@ -12,6 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/programming-hero-web-course1/manufacturer-website-server-side-ab-siddiq.git"
   },
+  "proxy":"https://react-exp-cycle-eqp-manufactur.web.app/",
   "keywords": [],
   "author": "",
   "license": "ISC",
