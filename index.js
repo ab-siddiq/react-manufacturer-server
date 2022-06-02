@@ -12,7 +12,7 @@ const corsOption = () => {
   // origin: 'http://localhost:3000/';
 }
 // app.use(cors(corsOption));
-app.use(cors({origin: 'https://react-exp-cycle-eqp-manufactur.web.app/'}));
+app.use(cors(corsOption));
 // app.use(cors({origin: 'http://localhost:3000/'}));
 app.use(express.json());
 
@@ -63,8 +63,12 @@ async function run() {
       res.set('Access-Control-Allow-Origin', 'https://react-exp-cycle-eqp-manufactur.web.app/');
       res.send({ "msg": "This has CORS enabled 🎈" })
       })
+      app.use((req, res, next) => {
+        res.header('Access-Control-Allow-Origin', 'https://react-exp-cycle-eqp-manufactur.web.app/');
+        next();
+      });
     //get products
-    app.get("/products", async (req, res) => {
+    app.get("/products", cors(corsOption),async (req, res) => {
       const products = await productCollection.find().toArray();
       res.send(products);
     });
