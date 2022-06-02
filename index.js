@@ -68,7 +68,7 @@ async function run() {
         next();
       });
     //get products
-    app.get("/products", cors(corsOption),async (req, res) => {
+    app.get("/products",async (req, res) => {
       const products = await productCollection.find().toArray();
       res.send(products);
     });
