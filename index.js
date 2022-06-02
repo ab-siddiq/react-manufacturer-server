@@ -7,7 +7,7 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({origin: 'https://react-exp-cycle-eqp-manufactur.web.app/'}));
 app.use(express.json());
 
 const { options } = require("nodemon/lib/config");
