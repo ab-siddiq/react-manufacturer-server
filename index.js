@@ -11,8 +11,8 @@ const corsOption = () => {
   origin: 'https://react-exp-cycle-eqp-manufactur.web.app/';
   // origin: 'http://localhost:3000/';
 }
-app.use(cors(corsOption));
-// app.use(cors({origin: 'https://react-exp-cycle-eqp-manufactur.web.app/'}));
+// app.use(cors(corsOption));
+app.use(cors({origin: 'https://react-exp-cycle-eqp-manufactur.web.app/'}));
 // app.use(cors({origin: 'http://localhost:3000/'}));
 app.use(express.json());
 
