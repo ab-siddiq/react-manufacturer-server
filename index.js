@@ -8,11 +8,11 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 const app = express();
 const port = process.env.PORT || 5000;
 const corsOption = () => {
-  // origin: 'https://react-exp-cycle-eqp-manufactur.web.app/';
-  origin: 'http://localhost:3000/';
+  origin: 'https://react-exp-cycle-eqp-manufactur.web.app/';
+  // origin: 'http://localhost:3000/';
 }
-// app.use(cors());
-app.use(cors({origin: 'https://react-exp-cycle-eqp-manufactur.web.app/'}));
+app.use(cors(corsOption));
+// app.use(cors({origin: 'https://react-exp-cycle-eqp-manufactur.web.app/'}));
 // app.use(cors({origin: 'http://localhost:3000/'}));
 app.use(express.json());
 
@@ -60,7 +60,7 @@ async function run() {
       res.send(users);
     });
     //get products
-    app.get("/products", async (req, res) => {
+    app.get("/products",cors(corsOption), async (req, res) => {
       const products = await productCollection.find().toArray();
       res.send(products);
     });
@@ -72,12 +72,12 @@ async function run() {
       res.send(result);
     });
     //get category
-    app.get("/categories", async (req, res) => {
+    app.get("/categories", cors(corsOption),async (req, res) => {
       const categories = await categoryCollection.find().toArray();
       res.send(categories);
     });
     //get reviews
-    app.get("/reviews", async (req, res) => {
+    app.get("/reviews", cors(corsOption),async (req, res) => {
       const reviews = await reviewCollection.find().toArray();
       res.send(reviews);
     });
