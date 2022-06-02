@@ -7,8 +7,10 @@ const { MongoClient, ServerApiVersion } = require("mongodb");
 
 const app = express();
 const port = process.env.PORT || 5000;
-
-app.use(cors({origin: 'https://react-exp-cycle-eqp-manufactur.web.app/'}));
+const corsOption = () => {
+  origin: 'https://react-exp-cycle-eqp-manufactur.web.app/';
+}
+app.use(cors(corsOption));
 app.use(express.json());
 
 const { options } = require("nodemon/lib/config");
@@ -55,24 +57,24 @@ async function run() {
       res.send(users);
     });
     //get products
-    app.get("/products", async (req, res) => {
+    app.get("/products", cors(corsOption),async (req, res) => {
       const products = await productCollection.find().toArray();
       res.send(products);
     });
     //get product by id
-    app.get("/purchase/:id", async (req, res) => {
+    app.get("/purchase/:id", cors(corsOption),async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
       const result = await productCollection.findOne(query);
       res.send(result);
     });
     //get category
-    app.get("/categories", async (req, res) => {
+    app.get("/categories", cors(corsOption),async (req, res) => {
       const categories = await categoryCollection.find().toArray();
       res.send(categories);
     });
     //get reviews
-    app.get("/reviews", async (req, res) => {
+    app.get("/reviews", cors(corsOption),async (req, res) => {
       const reviews = await reviewCollection.find().toArray();
       res.send(reviews);
     });
