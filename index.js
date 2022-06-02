@@ -60,7 +60,7 @@ async function run() {
       res.send(users);
     });
     //get products
-    app.get("/products",cors(corsOption), async (req, res) => {
+    app.get("/products", async (req, res) => {
       const products = await productCollection.find().toArray();
       res.send(products);
     });
@@ -72,12 +72,12 @@ async function run() {
       res.send(result);
     });
     //get category
-    app.get("/categories", cors(corsOption),async (req, res) => {
+    app.get("/categories", async (req, res) => {
       const categories = await categoryCollection.find().toArray();
       res.send(categories);
     });
     //get reviews
-    app.get("/reviews", cors(corsOption),async (req, res) => {
+    app.get("/reviews", async (req, res) => {
       const reviews = await reviewCollection.find().toArray();
       res.send(reviews);
     });
