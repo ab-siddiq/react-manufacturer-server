@@ -12,7 +12,7 @@ const corsOption = () => {
   // origin: 'http://localhost:3000/';
 }
 // app.use(cors(corsOption));
-app.use(cors(corsOption));
+app.use(cors({origin: 'https://react-exp-cycle-eqp-manufactur.web.app/'}));
 // app.use(cors({origin: 'http://localhost:3000/'}));
 app.use(express.json());
 
@@ -23,6 +23,16 @@ const client = new MongoClient(uri, {
   useUnifiedTopology: true,
   serverApi: ServerApiVersion.v1,
 });
+
+
+app.get('/cors', (req, res) => {
+  res.set('Access-Control-Allow-Origin', 'https://react-exp-cycle-eqp-manufactur.web.app/');
+  res.send({ "msg": "This has CORS enabled 🎈" })
+  })
+  app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'https://react-exp-cycle-eqp-manufactur.web.app/');
+    next();
+  });
 
 const verifyJWT = (req, res, next) => {
   const authHeader = req.headers.authorization;
@@ -59,14 +69,7 @@ async function run() {
       const users = await userCollection.find().toArray();
       res.send(users);
     });
-    app.get('/cors', (req, res) => {
-      res.set('Access-Control-Allow-Origin', 'https://react-exp-cycle-eqp-manufactur.web.app/');
-      res.send({ "msg": "This has CORS enabled 🎈" })
-      })
-      app.use((req, res, next) => {
-        res.header('Access-Control-Allow-Origin', 'https://react-exp-cycle-eqp-manufactur.web.app/');
-        next();
-      });
+   
     //get products
     app.get("/products",async (req, res) => {
       const products = await productCollection.find().toArray();
