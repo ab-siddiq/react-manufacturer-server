@@ -12,8 +12,15 @@ const corsOption = () => {
   // origin: 'http://localhost:3000/';
 }
 // app.use(cors(corsOption));
-app.use(cors({origin: 'https://react-exp-cycle-eqp-manufactur.web.app/'}));
+// app.use(cors({origin: 'https://react-exp-cycle-eqp-manufactur.web.app/'}));
 // app.use(cors({origin: 'http://localhost:3000/'}));
+app.use(
+  cors({
+  origin: true,
+  optionsSuccessStatus: 200,
+  credentials: true,
+  })
+  );
 app.use(express.json());
 
 const { options } = require("nodemon/lib/config");
@@ -25,16 +32,16 @@ const client = new MongoClient(uri, {
 });
 
 
-app.get('/cors', (req, res) => {
-  res.set('Access-Control-Allow-Origin', 'http://localhost:3000/');
-  // res.set('Access-Control-Allow-Origin', 'https://react-exp-cycle-eqp-manufactur.web.app/');
-  res.send({ "msg": "This has CORS enabled 🎈" })
-  })
-  app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:3000/');
-    // res.header('Access-Control-Allow-Origin', 'https://react-exp-cycle-eqp-manufactur.web.app/');
-    next();
-  });
+// app.get('/cors', (req, res) => {
+//   res.set('Access-Control-Allow-Origin', 'http://localhost:3000/');
+//   // res.set('Access-Control-Allow-Origin', 'https://react-exp-cycle-eqp-manufactur.web.app/');
+//   res.send({ "msg": "This has CORS enabled 🎈" })
+//   })
+//   app.use((req, res, next) => {
+//     res.header('Access-Control-Allow-Origin', 'http://localhost:3000/');
+//     // res.header('Access-Control-Allow-Origin', 'https://react-exp-cycle-eqp-manufactur.web.app/');
+//     next();
+//   });
 
 const verifyJWT = (req, res, next) => {
   const authHeader = req.headers.authorization;
