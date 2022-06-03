@@ -26,11 +26,13 @@ const client = new MongoClient(uri, {
 
 
 app.get('/cors', (req, res) => {
-  res.set('Access-Control-Allow-Origin', 'https://react-exp-cycle-eqp-manufactur.web.app/');
+  res.set('Access-Control-Allow-Origin', 'http://localhost:3000/');
+  // res.set('Access-Control-Allow-Origin', 'https://react-exp-cycle-eqp-manufactur.web.app/');
   res.send({ "msg": "This has CORS enabled 🎈" })
   })
   app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://react-exp-cycle-eqp-manufactur.web.app/');
+    res.header('Access-Control-Allow-Origin', 'http://localhost:3000/');
+    // res.header('Access-Control-Allow-Origin', 'https://react-exp-cycle-eqp-manufactur.web.app/');
     next();
   });
 
